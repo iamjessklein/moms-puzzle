@@ -8,7 +8,7 @@ function vibe(p) { try { if ("vibrate" in navigator) navigator.vibrate(p) } catc
 function shuffleArr(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(Math.random() * (i + 1);
     [a[i], a[j]] = [a[j], a[i]]
   }
   if (a.every((v, i) => v === i)) return shuffleArr(arr)
@@ -144,6 +144,12 @@ if (typeof document !== "undefined" && !document.getElementById("nunito-font")) 
   link.rel = "stylesheet"
   link.href = "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
   document.head.appendChild(link)
+}
+if (typeof document !== "undefined" && !document.getElementById("global-box-sizing")) {
+  const style = document.createElement("style")
+  style.id = "global-box-sizing"
+  style.textContent = "input, textarea { box-sizing: border-box; }"
+  document.head.appendChild(style)
 }
 
 const GRID_SIZES = [
