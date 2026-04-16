@@ -1,0 +1,34 @@
+{
+  "name": "momspuzzle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "a puzzle game",
+  "keywords": [
+    "puzzle",
+    "mom"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "moms-puzzle"
+  },
+  "license": "ISC",
+  "author": "@iamjessklein",
+  "type": "commonjs",
+  "main": "vite.config.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "gh-pages": "^6.1.1",
+    "vite": "^8.0.8"
+  }
+}
