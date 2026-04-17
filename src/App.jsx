@@ -8,7 +8,7 @@ function vibe(p) { try { if ("vibrate" in navigator) navigator.vibrate(p) } catc
 function shuffleArr(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1);
+    const j = Math.floor(Math.random() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]]
   }
   if (a.every((v, i) => v === i)) return shuffleArr(arr)
@@ -148,7 +148,7 @@ if (typeof document !== "undefined" && !document.getElementById("nunito-font")) 
 if (typeof document !== "undefined" && !document.getElementById("global-box-sizing")) {
   const style = document.createElement("style")
   style.id = "global-box-sizing"
-  style.textContent = "input, textarea { box-sizing: border-box; }"
+  style.textContent = "*, *::before, *::after { box-sizing: border-box; }"
   document.head.appendChild(style)
 }
 
@@ -698,8 +698,7 @@ function PuzzlePlayer({ puzzle, onBack }) {
       {from    && <p style={{ color:muted, fontSize:"13px", fontWeight:"700", marginBottom:"20px" }}>— {from}</p>}
       <img src={photos[photoIdx]} style={{ width:"100%", maxWidth:"340px", borderRadius:"20px", border:`4px solid ${violetLt}`, boxShadow:"0 8px 32px rgba(100,80,200,0.18)", marginBottom:"20px", display:"block" }} />
       <div style={{ display:"flex", gap:"10px", width:"100%", maxWidth:"340px" }}>
-        <PrimaryBtn   onClick={() => startGame(photoIdx, pCols, pRows)} style={{ flex:1 }}>🔄 Play Again</PrimaryBtn>
-        <SecondaryBtn onClick={() => setScreen("intro")}                 style={{ flex:1 }}>📷 Pick Photo</SecondaryBtn>
+        <PrimaryBtn onClick={() => startGame(photoIdx, pCols, pRows)} style={{ flex:1 }}>🔄 Play Again</PrimaryBtn>
       </div>
     </div>
   )
@@ -736,6 +735,9 @@ export default function App() {
     try {
       const puzzle = await loadPuzzleData(puzzleMeta.key)
       setPlayerPuzzle(puzzle)
+      document.title = puzzle.from
+        ? `A puzzle from ${puzzle.from} 🧩`
+        : "Family Puzzle 🧩"
       setAppState("play")
       return true
     } catch(e) {
