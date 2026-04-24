@@ -1,0 +1,17 @@
+{
+  "name": "Puzzle Maker",
+  "short_name": "Puzzle Maker",
+  "description": "A photo puzzle made just for you",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FF6B9D",
+  "theme_color": "#FF8E53",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

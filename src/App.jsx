@@ -275,7 +275,7 @@ function Builder({ onDone }) {
   return (
     <div style={{ display:"flex", flexDirection:"column", alignItems:"center", padding:"32px 16px 60px", minHeight:"100vh", background:bg, fontFamily:ff }}>
       <div style={{ textAlign:"center", marginBottom:"28px" }}>
-        <div style={{ fontSize:"52px", marginBottom:"4px" }}>🧩</div>
+        <img src="https://static.thenounproject.com/png/heart-puzzle-icon-7589425-512.png" alt="" style={{ width:"72px", height:"72px", marginBottom:"4px", filter:"invert(30%) sepia(80%) saturate(500%) hue-rotate(130deg) brightness(70%)" }} />
         <h1 style={{ fontSize:"clamp(26px,8vw,38px)", fontWeight:"900", color:ink, margin:"0 0 6px", letterSpacing:"-0.5px", lineHeight:1.1 }}>
           Puzzle <span style={{ color:violet }}>Builder</span>
         </h1>
@@ -588,7 +588,7 @@ function PuzzlePlayer({ puzzle, onBack }) {
         <button onClick={onBack} style={{ alignSelf:"flex-start", background:"white", border:`2px solid ${violetLt}`, borderRadius:"12px", padding:"8px 14px", color:violet, fontWeight:"800", fontSize:"13px", cursor:"pointer", fontFamily:ff, marginBottom:"16px", boxShadow:"0 2px 8px rgba(124,111,205,0.1)" }}>← Builder</button>
       )}
       <div style={{ textAlign:"center", marginBottom:"24px" }}>
-        <div style={{ fontSize:"48px", marginBottom:"6px" }}>🧩</div>
+        <img src="https://static.thenounproject.com/png/heart-puzzle-icon-7589425-512.png" alt="" style={{ width:"64px", height:"64px", marginBottom:"6px", filter:"invert(30%) sepia(80%) saturate(500%) hue-rotate(130deg) brightness(70%)" }} />
         <h1 style={{ fontSize:"clamp(20px,7vw,32px)", fontWeight:"900", color:ink, margin:"0 0 6px", letterSpacing:"-0.5px", lineHeight:1.1 }}>{title}</h1>
         <p style={{ color:muted, fontSize:"13px", margin:"0", fontWeight:"600" }}>A puzzle made just for you 💕</p>
       </div>
@@ -748,7 +748,7 @@ export default function App() {
   if (appState === "loading") return (
     <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", background:bg, fontFamily:ff }}>
       <div style={{ textAlign:"center", color:muted }}>
-        <div style={{ fontSize:"40px", marginBottom:"12px" }}>🧩</div>
+        <img src="https://static.thenounproject.com/png/heart-puzzle-icon-7589425-512.png" alt="" style={{ width:"52px", height:"52px", marginBottom:"12px", filter:"invert(30%) sepia(80%) saturate(500%) hue-rotate(130deg) brightness(70%)", opacity:.5 }} />
         <div style={{ fontSize:"16px" }}>Loading…</div>
       </div>
     </div>
